@@ -13,7 +13,7 @@ export default function Intro({navigation}) {
   useEffect(() => {
     // Set a timeout to navigate to the new screen after 3000 milliseconds (3 seconds)
     const timeout = setTimeout(() => {
-      navigation.navigate('Home');
+      navigation.navigate('Login');
     }, 5000);
 
     // Clear the timeout to prevent navigation if the component unmounts before the timeout

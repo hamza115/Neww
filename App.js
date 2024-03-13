@@ -1,4 +1,5 @@
 import React, {useEffect} from 'react';
+import {ScrollView} from 'react-native';
 
 import {createStackNavigator} from '@react-navigation/stack';
 import Intro from './pages/Intro';
@@ -16,6 +17,7 @@ import {
 import {useFonts} from 'expo-font';
 import Testing from './pages/Testing';
 import FoodDetail from './components/FoodDetail';
+import Login from './pages/Login';
 
 const Stack = createStackNavigator();
 
@@ -62,6 +64,14 @@ export default function App() {
         <Stack.Screen
           name="Intro"
           component={Intro}
+          options={{
+            gestureEnabled: false, // Disable swipe back gesture for this screen
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="Login"
+          component={Login}
           options={{
             gestureEnabled: false, // Disable swipe back gesture for this screen
             headerShown: false,
